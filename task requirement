@@ -1,0 +1,64 @@
+Given two arrays marvelHeroes and dcHeroes:
+
+let marvelHeroes = [
+	{
+		name: "Thor"
+	},
+	{
+		name: "Spider Man"
+	}
+];
+
+let dcHeroes = [
+	{
+		name: "Superman"
+	},
+	{
+		name: "Batman"
+	},
+	{
+		name: "Deadpool"
+	}
+];
+And folder with images - images, there are two folders with super-hero icons (in additional materials):
+
+marvel
+dc
+Task:
+
+In the Array.prototype add property with heroesRender naming in the value of witch the function is located.
+This function can be called in every array context and  as a leading argument this function should have naming of the folder ('dc', 'marvel'), with which super-hero icons will pull up . Example:
+dcHeroes.heroesRender('dc');
+marvelHeroes.heroesRender('marvel');
+Function should return table, which render information about every inputed object. Tr element should look like this:
+<tr>
+	<td>Thor</td>
+	<td>
+		<img src="images/marvel/thor.svg">
+	</td>
+</tr>
+In the first td element render name of the object.
+In the second td render image, path should have name of folder from the argument, that we have when we called function heroesRender(). In this example folder name is marvel and function call is marvelHeroes.heroesRender('marvel'); The name of the image – it's field name in the object, with replaces all spaces and reduced to lower case. For example for { name: Spider Man } icons will look like this spiderman.svg
+Example for table render:
+
+<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Icon</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Thor</td>
+				<td>
+					<img src="images/marvel/thor.svg">
+				</td>
+			</tr><tr>
+				<td>Spider Man</td>
+				<td>
+					<img src="images/marvel/spiderman.svg">
+				</td>
+			</tr>
+		</tbody>
+	</table>
